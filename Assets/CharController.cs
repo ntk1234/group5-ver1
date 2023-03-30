@@ -10,9 +10,10 @@ public class CharController : MonoBehaviour
 	public float rotSpeed = 10;
 	Vector3 moveDirection;
 
+
 	void Start()
 		{
-			anim = GetComponent<Animator>();
+		anim = GetComponent<Animator>();
 		}
 
 		void Update()
@@ -31,6 +32,16 @@ public class CharController : MonoBehaviour
 			Quaternion newRotation = Quaternion.LookRotation(moveDirection);
 			transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
 		}
+       
+	/*	if (anim)
+		{
+			anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 1f, Time.deltaTime * 10));
+		}
+		else
+		{
+			anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 0f, Time.deltaTime * 10));
+		}
+	*/
 		if (Input.GetButtonDown("Fire1") 
 			//&&!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")
 			)
