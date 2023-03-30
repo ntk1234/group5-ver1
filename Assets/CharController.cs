@@ -31,9 +31,12 @@ public class CharController : MonoBehaviour
 			Quaternion newRotation = Quaternion.LookRotation(moveDirection);
 			transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
 		}
-		if (Input.GetButtonDown("Fire1") &&
-			!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack"))
+		if (Input.GetButtonDown("Fire1") 
+			//&&!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")
+			)
 			anim.SetTrigger("attack");
 
+		if (Input.GetButtonDown("Fire2"))
+			anim.SetTrigger("moveAttack");
 	}
 	}
