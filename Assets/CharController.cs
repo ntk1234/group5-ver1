@@ -2,26 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class CharController : MonoBehaviour
 {
 	
 	Animator anim;
 
-	public enum AnimState{ IDLE=0, ATTACK=1,MOVE_ATTACK=2}
-	public AnimState _animState = AnimState.IDLE;
+	
 	public float rotSpeed = 10;
 	Vector3 moveDirection;
 
-	public GameObject projectile;
-	public float fireDelta = 0.5F;
-
-	private float nextFire = 0.5F;
-	private GameObject newProjectile;
-	private float myTime = 0.0F;
 	void Start()
 		{
 		anim = GetComponent<Animator>();
-		}
+		
+	}
 
 		void Update()
 		{
@@ -39,8 +34,25 @@ public class CharController : MonoBehaviour
 			Quaternion newRotation = Quaternion.LookRotation(moveDirection);
 			transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
 		}
-       
-		if(_animState== AnimState.IDLE){ ... }
+
+
+		if (Input.GetButtonDown("Fire1")) { 
+			anim.SetTrigger("attack");
+
+			}
+
+		if (Input.GetButton("Fire2"))
+		{
+
+			anim.SetTrigger("moveAttack");
+
+		}
+
+			
+
+	}
+}
+/*if(_animState== AnimState.IDLE){ ... }
 		else if(_animState == AnimState.ATTACK) { anim.SetTrigger("attack"); }
 		else if (_animState == AnimState.MOVE_ATTACK){ ... }
 		/*	if (anim)
@@ -52,16 +64,4 @@ public class CharController : MonoBehaviour
 				anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 0f, Time.deltaTime * 10));
 			}
 		*/
-		//if (Input.GetButtonDown("Fire1") { anim.SetTrigger("attack"); }
-		if (Input.GetButtonDown("Fire1")){ _animState=AnimState.ATTACK; }
-		if (Input.GetButton("Fire2")){
-			
-			anim.SetTrigger("moveAttack");
-
-			
-		}
-		if (Input.GetButtonUp("Fire2"))
-			anim.SetTrigger("moveAttackclose");
-
-	}
-}
+//if (Input.GetButtonDown("Fire1") { anim.SetTrigger("attack"); }
