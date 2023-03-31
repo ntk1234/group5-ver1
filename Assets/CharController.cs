@@ -7,10 +7,17 @@ public class CharController : MonoBehaviour
 	
 	Animator anim;
 
+	public enum AnimState{ IDLE=0, ATTACK=1,MOVE_ATTACK=2}
+	public AnimState _animState = AnimState.IDLE;
 	public float rotSpeed = 10;
 	Vector3 moveDirection;
 
+	public GameObject projectile;
+	public float fireDelta = 0.5F;
 
+	private float nextFire = 0.5F;
+	private GameObject newProjectile;
+	private float myTime = 0.0F;
 	void Start()
 		{
 		anim = GetComponent<Animator>();
@@ -33,21 +40,28 @@ public class CharController : MonoBehaviour
 			transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
 		}
        
-	/*	if (anim)
-		{
-			anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 1f, Time.deltaTime * 10));
-		}
-		else
-		{
-			anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 0f, Time.deltaTime * 10));
-		}
-	*/
-		if (Input.GetButtonDown("Fire1") 
-			//&&!anim.GetCurrentAnimatorStateInfo(0).IsName("Attack")
-			)
-			anim.SetTrigger("attack");
-
-		if (Input.GetButtonDown("Fire2"))
+		if(_animState== AnimState.IDLE){ ... }
+		else if(_animState == AnimState.ATTACK) { anim.SetTrigger("attack"); }
+		else if (_animState == AnimState.MOVE_ATTACK){ ... }
+		/*	if (anim)
+			{
+				anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 1f, Time.deltaTime * 10));
+			}
+			else
+			{
+				anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 0f, Time.deltaTime * 10));
+			}
+		*/
+		//if (Input.GetButtonDown("Fire1") { anim.SetTrigger("attack"); }
+		if (Input.GetButtonDown("Fire1")){ _animState=AnimState.ATTACK; }
+		if (Input.GetButton("Fire2")){
+			
 			anim.SetTrigger("moveAttack");
+
+			
+		}
+		if (Input.GetButtonUp("Fire2"))
+			anim.SetTrigger("moveAttackclose");
+
 	}
-	}
+}

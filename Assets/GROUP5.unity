@@ -4331,6 +4331,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 10
+  projectile: {fileID: 0}
+  fireDelta: 0.5
 --- !u!1 &7138560356252916290
 GameObject:
   m_ObjectHideFlags: 0
