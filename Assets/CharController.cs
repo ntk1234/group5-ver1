@@ -41,7 +41,7 @@ public class CharController : MonoBehaviour
 
 			}
 
-		if (Input.GetButton("Fire2"))
+		if (Input.GetButtonDown("Fire2"))
 		{
 
 			anim.SetTrigger("moveAttack");
