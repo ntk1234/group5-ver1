@@ -11,12 +11,16 @@ public class CharController : MonoBehaviour
 	
 	public float rotSpeed = 10;
 	Vector3 moveDirection;
+	public int health = 100;
 
 	void Start()
 		{
 		anim = GetComponent<Animator>();
 		
-	}
+	
+		health = 100;
+	
+}
 
 		void Update()
 		{
