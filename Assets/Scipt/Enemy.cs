@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public float speed = 5f;
-    public float chaseDistance = 10f;
-    public float knockbackForce = 10f;
+    public int health = 100;
+    public int damage = 10;
+    public float moveSpeed = 3f;
 
     private Transform target;
 
@@ -17,31 +17,10 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        if (Vector3.Distance(transform.position, target.position) < chaseDistance)
-        {
-            transform.LookAt(target);
-            transform.position += transform.forward * speed * Time.deltaTime;
-        }
+        transform.LookAt(target);
+        transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        moveSpeed = Mathf.Clamp(moveSpeed, 0f, 10f); // 使用Mathf.Clamp方法限制移動速度範圍
     }
-
-    public int health = 100;
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-        {
-            Die();
-        }
-    }
-
-    private void Die()
-    {
-        Destroy(gameObject);
-    }
-
-    public int damage = 10;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,11 +30,22 @@ public class Enemy : MonoBehaviour
             if (playerController != null)
             {
                 playerController.health -= damage;
-
-                // Add knockback force to enemy
-                Vector3 knockbackDirection = (transform.position - other.transform.position).normalized;
-                GetComponent<Rigidbody>().AddForce(knockbackDirection * knockbackForce, ForceMode.Impulse);
+                Die();
             }
         }
     }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+    }
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if (health <= 0)
+        {
+            Die();
+        }
+    }
+
 }

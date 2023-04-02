@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
-    public CapsuleCollider attackRangeObject;
-    public int damage = 20;
+    public BoxCollider attackRangeObject;
+    public int damage = 10;
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetButtonDown("Fire1"))
         {
             Attack();
         }
@@ -17,10 +17,10 @@ public class Weapon : MonoBehaviour
 
     private void Attack()
     {
-        Collider[] hitEnemies = Physics.OverlapCapsule(
-            attackRangeObject.transform.position + attackRangeObject.center - Vector3.up * attackRangeObject.height / 2f,
-            attackRangeObject.transform.position + attackRangeObject.center + Vector3.up * attackRangeObject.height / 2f,
-            attackRangeObject.radius);
+        Collider[] hitEnemies = Physics.OverlapBox(
+            attackRangeObject.bounds.center,
+            attackRangeObject.bounds.extents,
+            attackRangeObject.transform.rotation);
 
         foreach (Collider enemy in hitEnemies)
         {
@@ -28,6 +28,14 @@ public class Weapon : MonoBehaviour
             if (enemyComponent != null)
             {
                 enemyComponent.TakeDamage(damage);
+                if (enemyComponent.health <= 0)
+                {
+                    CharController playerController = GetComponentInParent<CharController>();
+                    if (playerController != null)
+                    {
+                        playerController.score += 10;
+                    }
+                }
             }
         }
     }
@@ -35,6 +43,6 @@ public class Weapon : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackRangeObject.bounds.center, attackRangeObject.radius);
+        Gizmos.DrawWireCube(attackRangeObject.bounds.center, attackRangeObject.bounds.size);
     }
 }
