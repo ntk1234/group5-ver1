@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,6 +21,7 @@ public class CharController : MonoBehaviour
         anim = GetComponent<Animator>();
         health = 100;
         characterController = GetComponent<CharacterController>();
+        animator = GetComponent<Animator>();
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
         healthSlider.maxValue = health;
@@ -74,15 +76,15 @@ public class CharController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Collectible"))
+        if (other.gameObject.CompareTag("Collectible"))
         {
             score += 10;
             Destroy(other.gameObject);
         }
 
-        if (other.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<CharController>() != null)
         {
-            TakeDamage(10);
+            other.gameObject.GetComponent<CharController>().TakeDamage(10);
         }
     }
 }
