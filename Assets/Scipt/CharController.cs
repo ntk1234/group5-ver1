@@ -1,8 +1,8 @@
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CharController : MonoBehaviour
 {
@@ -15,6 +15,9 @@ public class CharController : MonoBehaviour
     private Animator animator;
     public Text scoreText;
     public Slider healthSlider;
+    public GameObject death;
+    public float gameOverDelay = 1f;
+    private bool isGameOver = false;
 
     void Start()
     {
@@ -57,21 +60,34 @@ public class CharController : MonoBehaviour
 
         scoreText.text = "Score: " + score.ToString();
         healthSlider.value = health;
+
+        if (health <= 0 && !isGameOver)
+        {
+            isGameOver = true;
+            GameOver();
+        }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0)
+        CharacterController controller = GetComponent<CharacterController>();
+        if (controller != null && health <= 0)
         {
-            animator.SetTrigger("death");
-            characterController.enabled = false;
-            // Game over
+            controller.enabled = false;
+            Invoke("Restart", gameOverDelay);
         }
-        else
-        {
-            animator.SetTrigger("hit");
-        }
+    }
+
+    void GameOver()
+    {
+        death.SetActive(true);
+        Invoke("Restart", 1f);
+    }
+
+    void Restart()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     private void OnTriggerEnter(Collider other)

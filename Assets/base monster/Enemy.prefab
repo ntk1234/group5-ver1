@@ -1436,7 +1436,7 @@ Transform:
   - {fileID: 3801937040068718333}
   - {fileID: 2531990165237674931}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!136 &1068578372828023452
 CapsuleCollider:
@@ -1481,7 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 10
+  damage: 20
   moveSpeed: 5
   damageEffectPrefab: {fileID: 0}
 --- !u!1 &7392635610718870969
