@@ -92,13 +92,9 @@ public class CharController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Collectible"))
-        {
-            score += 10;
-            Destroy(other.gameObject);
-        }
 
-        if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<CharController>() != null)
+    
+if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<CharController>() != null)
         {
             other.gameObject.GetComponent<CharController>().TakeDamage(10);
         }
