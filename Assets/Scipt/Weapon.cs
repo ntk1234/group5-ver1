@@ -5,7 +5,8 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public BoxCollider attackRangeObject;
-    public int damage = 10;
+    public int integerDamage = 10; // 將整數攻擊力改為 integerDamage 變數
+    public float damage = 10.0f; // 浮點數攻擊力
 
     private void Update()
     {
@@ -27,7 +28,7 @@ public class Weapon : MonoBehaviour
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
             if (enemyComponent != null)
             {
-                enemyComponent.TakeDamage(damage);
+                enemyComponent.TakeDamage(integerDamage); // 使用 integerDamage 變數
                 if (enemyComponent.health <= 0)
                 {
                     CharController playerController = GetComponentInParent<CharController>();
