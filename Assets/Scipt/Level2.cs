@@ -23,9 +23,9 @@ public class Level2 : MonoBehaviour
         // 自動保存生命值，然後切換到 Level 2
         if (Time.timeSinceLevelLoad >= 10f)
         {
-          /*  // 保存生命值和攻擊力
+           // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);
-            PlayerPrefs.SetFloat("attack", 20f);*/
+            PlayerPrefs.SetFloat("attack", 20f);
 
             SceneManager.LoadScene("Level2");
         }

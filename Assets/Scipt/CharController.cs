@@ -22,7 +22,6 @@ public class CharController : MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        health = 100;
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
@@ -71,18 +70,17 @@ public class CharController : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        CharacterController controller = GetComponent<CharacterController>();
-        if (controller != null && health <= 0)
+        if (health <= 0 && !isGameOver)
         {
-            controller.enabled = false;
-            Invoke("Restart", gameOverDelay);
+            isGameOver = true;
+            GameOver();
         }
     }
 
     void GameOver()
     {
         death.SetActive(true);
-        Invoke("Restart", 1f);
+        Invoke("Restart", gameOverDelay);
     }
 
     void Restart()
@@ -92,19 +90,18 @@ public class CharController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-
-
         if (other.gameObject.CompareTag("Collectible"))
-
         {
             score += 10;
             Destroy(other.gameObject);
-
         }
-
-            if (other.gameObject.CompareTag("Enemy") && other.gameObject.GetComponent<CharController>() != null)
+        else if (other.gameObject.CompareTag("Enemy"))
         {
-            other.gameObject.GetComponent<CharController>().TakeDamage(10);
+            CharController enemyController = other.gameObject.GetComponent<CharController>();
+            if (enemyController != null)
+            {
+                enemyController.TakeDamage(10);
+            }
         }
     }
 }

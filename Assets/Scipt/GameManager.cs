@@ -8,36 +8,19 @@ public enum PlayerAbility
     Health
 }
 
-
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     public int score = 0;
     public Text scoreText;
-    // 玩家能力
-    private PlayerAbility playerAbility;
 
-    // 用於顯示玩家能力的 Dropdown UI 組件
+    private PlayerAbility playerAbility;
     public Dropdown playerAbilityDropdown;
 
-    // 下一關遊戲的場景名稱
     public string nextLevelSceneName;
 
-    private void Start()
-    {
-        // 設置 Dropdown UI 組件的選項
-        playerAbilityDropdown.options.Clear();
-        playerAbilityDropdown.options.Add(new Dropdown.OptionData("增強攻擊力"));
-        playerAbilityDropdown.options.Add(new Dropdown.OptionData("增強生命值"));
-
-        // 註冊 Dropdown UI 組件的 OnValueChanged 事件
-        playerAbilityDropdown.onValueChanged.AddListener(OnPlayerAbilityDropdownChanged);
-        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-        scoreText.text = "Score: " + score.ToString();
-    }
-
-    void Awake()
+    private void Awake()
     {
         if (Instance == null)
         {
@@ -49,8 +32,33 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        // 設置 Dropdown UI 組件的選項
+        playerAbilityDropdown.options.Clear();
+        playerAbilityDropdown.options.Add(new Dropdown.OptionData("增強攻擊力"));
+        playerAbilityDropdown.options.Add(new Dropdown.OptionData("增強生命值"));
 
-    void Update()
+        // 註冊 Dropdown UI 組件的 OnValueChanged 事件
+        playerAbilityDropdown.onValueChanged.AddListener(OnPlayerAbilityDropdownChanged);
+
+        // 獲取分數組件
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        UpdateScoreText(); // 更新分數文本
+    }
+
+    private void Update()
+    {
+        // 此處可以添加其他更新邏輯
+    }
+
+    public void AddScore(int pointsToAdd)
+    {
+        score += pointsToAdd;
+        UpdateScoreText(); // 更新分數文本
+    }
+
+    private void UpdateScoreText()
     {
         scoreText.text = "Score: " + score.ToString();
     }
@@ -90,11 +98,4 @@ public class GameManager : MonoBehaviour
         // 重新加載當前場景
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-    
 }
-
-
-
-
-
-

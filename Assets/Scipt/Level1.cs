@@ -26,8 +26,8 @@ public class Level1 : MonoBehaviour
         {
             // 保存生命值
             // 保存生命值和攻擊力
-            /* PlayerPrefs.SetInt("health", 50);
-             PlayerPrefs.SetFloat("attack", 20f);*/
+             PlayerPrefs.SetInt("health", 50);
+             PlayerPrefs.SetFloat("attack", 20f);
 
             SceneManager.LoadScene("Level2");
 }

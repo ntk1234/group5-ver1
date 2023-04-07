@@ -2824,7 +2824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1726292359
 Transform:
   m_ObjectHideFlags: 0
@@ -2847,14 +2847,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726292358}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f2f2e8990bcf94d4fb2a0e8d3c5d74c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
-  scoreText: {fileID: 0}
-  playerAbilityDropdown: {fileID: 0}
+  score: 100
+  scoreText: {fileID: 1256881320}
+  playerAbilityDropdown: {fileID: 1892227057}
   nextLevelSceneName: 
 --- !u!1 &1757168150
 GameObject:
@@ -5461,6 +5461,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1
       objectReference: {fileID: 0}
+    - target: {fileID: 4323070262758880284, guid: 8567c75766aaeeb4daf5941c0f2a451c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4323070262758880287, guid: 8567c75766aaeeb4daf5941c0f2a451c, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -6745,7 +6749,7 @@ MonoBehaviour:
   scoreText: {fileID: 0}
   healthSlider: {fileID: 0}
   death: {fileID: 1757168150}
-  gameOverDelay: 1
+  gameOverDelay: 2
 --- !u!114 &7136770397205441252
 MonoBehaviour:
   m_ObjectHideFlags: 0

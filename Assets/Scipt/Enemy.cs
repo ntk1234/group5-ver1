@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int score = 10;
     public int health = 100;
     public int damage = 10;
     public float moveSpeed = 3f;
@@ -25,9 +26,13 @@ public class Enemy : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") && other.gameObject.GetComponent<CharController>() != null)
+        if (other.gameObject.CompareTag("Player"))
         {
-            other.gameObject.GetComponent<CharController>().TakeDamage(damage);
+            CharController playerController = other.gameObject.GetComponent<CharController>();
+            if (playerController != null)
+            {
+                playerController.TakeDamage(damage);
+            }
             TakeDamageEffect(damage);
             Die();
         }
@@ -35,6 +40,12 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
+        // 增加玩家分數
+        CharController playerController = FindObjectOfType<CharController>();
+        if (playerController != null)
+        {
+            playerController.score += score;
+        }
         Destroy(gameObject);
     }
 
