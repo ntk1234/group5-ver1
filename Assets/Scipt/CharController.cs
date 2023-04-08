@@ -13,10 +13,10 @@ public class CharController : MonoBehaviour
     public int score = 0;
     private CharacterController characterController;
     private Animator animator;
-    public Text scoreText;
-    public Slider healthSlider;
+    public static Text scoreText;
+    public static Slider healthSlider;
     public GameObject death;
-    public float gameOverDelay = 1f;
+    public float gameOverDelay = 0.2f;
     private bool isGameOver = false;
 
     void Start()
@@ -73,29 +73,29 @@ public class CharController : MonoBehaviour
         if (health <= 0 && !isGameOver)
         {
             isGameOver = true;
+            
             GameOver();
         }
     }
 
     void GameOver()
     {
+        
         death.SetActive(true);
+        /*PlayerPrefs.SetInt("health", health); // 將health值保存到PlayerPrefs中*/
         Invoke("Restart", gameOverDelay);
+        
     }
 
     void Restart()
     {
+        
         SceneManager.LoadScene("Title");
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Collectible"))
-        {
-            score += 10;
-            Destroy(other.gameObject);
-        }
-        else if (other.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             CharController enemyController = other.gameObject.GetComponent<CharController>();
             if (enemyController != null)
@@ -103,5 +103,10 @@ public class CharController : MonoBehaviour
                 enemyController.TakeDamage(10);
             }
         }
+    }
+
+    public void AddScore(int points)
+    {
+        score += points;
     }
 }

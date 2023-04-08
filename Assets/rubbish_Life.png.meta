@@ -69,9 +69,15 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
     maxTextureSize: 512
     resizeAlgorithm: 1
     textureFormat: 4
+=======
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+>>>>>>> parent of f8bc6b7 (ver4.1.1)
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0

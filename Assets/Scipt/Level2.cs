@@ -16,18 +16,19 @@ public class Level2 : MonoBehaviour
         Debug.Log("Health: " + health);
         Debug.Log("Power: " + power);
         Debug.Log("Attack: " + attack);
+       
     }
 
     void Update()
     {
         // 自動保存生命值，然後切換到 Level 2
-        if (Time.timeSinceLevelLoad >= 10f)
+        if (Time.timeSinceLevelLoad >= 15f)
         {
            // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);
             PlayerPrefs.SetFloat("attack", 20f);
 
-            SceneManager.LoadScene("Level2");
+            SceneManager.LoadScene("Level3");
         }
     }
 }

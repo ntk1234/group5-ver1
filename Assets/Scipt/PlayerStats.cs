@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public static int health;
+
+    public CharController charController;
+    public Weapon weapon;
+
 
     void Awake()
     {
@@ -13,8 +16,12 @@ public class PlayerStats : MonoBehaviour
 
     void OnDestroy()
     {
-        // 保存當前生命值
-        PlayerPrefs.SetInt("health", health);
-        PlayerPrefs.Save();
+        // 確保 charController 和 weapon 不是空引用對象
+        if (charController != null && weapon != null)
+        {
+            PlayerPrefs.SetInt("health", charController.health);
+            PlayerPrefs.SetFloat("attack", weapon.damage);
+            PlayerPrefs.Save();
+        }
     }
 }

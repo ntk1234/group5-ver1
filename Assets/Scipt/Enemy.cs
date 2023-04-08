@@ -1,14 +1,14 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    public int score = 10;
     public int health = 100;
     public int damage = 10;
     public float moveSpeed = 3f;
     public GameObject damageEffectPrefab;
+    public int scoreValue = 10; // å¢žåŠ åˆ†æ•°
 
     private Transform target;
 
@@ -40,11 +40,10 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        // ¼W¥[ª±®a¤À¼Æ
         CharController playerController = FindObjectOfType<CharController>();
         if (playerController != null)
         {
-            playerController.score += score;
+            playerController.AddScore(scoreValue); // å¢žåŠ åˆ†æ•°
         }
         Destroy(gameObject);
     }
@@ -64,7 +63,6 @@ public class Enemy : MonoBehaviour
 
     private void TakeDamageEffect(int damage)
     {
-        // ¼½©ñ¦©¦å¯S®Ä
         if (damageEffectPrefab != null)
         {
             GameObject damageEffect = Instantiate(damageEffectPrefab, transform.position, Quaternion.identity);

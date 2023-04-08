@@ -1481,9 +1481,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 15
+  damage: 10
   moveSpeed: 5
   damageEffectPrefab: {fileID: 0}
+  scoreValue: 10
 --- !u!1 &7392635610718870969
 GameObject:
   m_ObjectHideFlags: 0

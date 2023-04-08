@@ -29,14 +29,6 @@ public class Weapon : MonoBehaviour
             if (enemyComponent != null)
             {
                 enemyComponent.TakeDamage(integerDamage); // 使用 integerDamage 變數
-                if (enemyComponent.health <= 0)
-                {
-                    CharController playerController = GetComponentInParent<CharController>();
-                    if (playerController != null)
-                    {
-                        playerController.score += 10;
-                    }
-                }
             }
         }
     }
