@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class SwitchSceneATK : MonoBehaviour {
 	public Weapon weapon;
 
-	public void NextScene (string sceneName) {
+	public void NextScene () {
 		Time.timeScale = 1;
 		weapon.damage += 5;
-		SceneManager.LoadScene(sceneName);
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 	}
 }
 

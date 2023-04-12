@@ -6,7 +6,8 @@ public class MyPauseMenu : MonoBehaviour
 {
     public CharController charController;
     public Weapon weapon;
-
+    [SerializeField] private GameObject _pauseMenu;
+    [SerializeField] private GameObject _pauseButton;
     void Start()
 
     {
@@ -20,18 +21,22 @@ public class MyPauseMenu : MonoBehaviour
         // TODO°G≈„•‹º»∞±µÊ≥Ê
     }
 
-    public void ATK(string sceneName)
+    public void PauseButton()
     {      
-        Time.timeScale = 1;
+        Time.timeScale = 1.0f;
         weapon.damage += 5;
-       
-        SceneManager.LoadScene(sceneName);
+        _pauseMenu.SetActive(true);
+        _pauseButton.SetActive(false);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
 
-    public void HP(string sceneName)
+    public void ResumeButton()
     {
-        Time.timeScale = 1;
-        charController.health += 20;
-        SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1.0f;
+        _pauseMenu.SetActive(false);
+        _pauseButton.SetActive(true);
+
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
     }
 }

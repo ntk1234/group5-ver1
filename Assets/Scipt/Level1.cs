@@ -32,8 +32,9 @@ public class Level1 : MonoBehaviour
             // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);
             PlayerPrefs.SetFloat("attack", 20f);
-            MyPauseMenu.SetActive(true);
-            
+            /*MyPauseMenu.SetActive(true);*/
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
         }
     }
 }
