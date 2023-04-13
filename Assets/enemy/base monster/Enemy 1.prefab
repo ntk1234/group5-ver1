@@ -1571,10 +1571,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8897032123496198382}
-  - component: {fileID: 1936544141352036693}
   - component: {fileID: 5814755093659507686}
   - component: {fileID: 7165551637899501478}
   - component: {fileID: 4311627770743618549}
+  - component: {fileID: 3354904421198919865}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -1591,7 +1591,7 @@ Transform:
   m_GameObject: {fileID: 8084888492003994196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.69, y: 0.07, z: 0}
-  m_LocalScale: {x: 10.124301, y: 10.124301, z: 10.124301}
+  m_LocalScale: {x: 5.608623, y: 5.608623, z: 5.608623}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2362304462883687732}
@@ -1599,20 +1599,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1936544141352036693
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8084888492003994196}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.25981408
-  m_Height: 0.7231608
-  m_Direction: 1
-  m_Center: {x: 0.02, y: 0.36, z: -0.0015105596}
 --- !u!54 &5814755093659507686
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1666,6 +1652,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &3354904421198919865
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8084888492003994196}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.68, y: 1.12, z: 0.5}
+  m_Center: {x: 0, y: 0.55, z: 0}
 --- !u!1 &8258559479314890352
 GameObject:
   m_ObjectHideFlags: 0

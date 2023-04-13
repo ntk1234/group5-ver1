@@ -22,7 +22,7 @@ public class Level2 : MonoBehaviour
     void Update()
     {
         // 自動保存生命值，然後切換到 Level 2
-        if (Time.timeSinceLevelLoad >= 15f)
+        if (Time.timeSinceLevelLoad >= 20f)
         {
            // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);

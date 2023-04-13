@@ -21,8 +21,10 @@ public class titleTest : MonoBehaviour
     void Update()
     {
         
-        gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(-94f, 102.4f, 0), Speed * Time.deltaTime);
-        
+        gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(-94f, 102.4f, 0), Speed * Time.deltaTime); 
+         if(Input.GetKey(KeyCode.Space)){
+            gameObject.transform.localPosition = Vector3.MoveTowards(gameObject.transform.localPosition, new Vector3(-94f, 102.4f, 0), Speed*2 * Time.deltaTime); }
+
 
     }
 }
