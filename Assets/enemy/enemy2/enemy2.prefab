@@ -131,7 +131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
-  damage: 20
+  damage: 10
   moveSpeed: 6
   damageEffectPrefab: {fileID: 0}
   scoreValue: 15

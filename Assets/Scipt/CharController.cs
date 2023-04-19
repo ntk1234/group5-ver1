@@ -16,9 +16,11 @@ public class CharController : MonoBehaviour
     public static Text scoreText;
     public static Slider healthSlider;
     public GameObject death;
-    public float gameOverDelay = 0.2f;
+    public float gameOverDelay = 0.1f;
     private bool isGameOver = false;
-
+    public AudioClip hitSound;
+    public AudioClip fightSound;
+    private AudioSource myAduioSource;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -28,6 +30,7 @@ public class CharController : MonoBehaviour
         healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
         healthSlider.maxValue = health;
         healthSlider.value = health;
+        myAduioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -50,11 +53,13 @@ public class CharController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("attack");
+            myAduioSource.PlayOneShot(fightSound);
         }
 
         if (Input.GetButtonDown("Fire2"))
         {
             anim.SetTrigger("moveAttack");
+            myAduioSource.PlayOneShot(hitSound);
         }
 
         scoreText.text = "Score: " + score.ToString();
