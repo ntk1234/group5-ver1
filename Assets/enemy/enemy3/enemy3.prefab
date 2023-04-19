@@ -215,9 +215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb0dbe3d2e638d244afce7195390f689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 150
+  health: 100
   damage: 10
-  moveSpeed: 4
+  moveSpeed: 3
   damageEffectPrefab: {fileID: 0}
   scoreValue: 10
 --- !u!136 &6333230675787159190
