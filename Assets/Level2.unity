@@ -6074,7 +6074,7 @@ MonoBehaviour:
   health: 100
   score: 0
   death: {fileID: 1757168150}
-  gameOverDelay: 1
+  gameOverDelay: 2
   hitSound: {fileID: 8300000, guid: 8d650c990cdee73498c20b79c9dcec9f, type: 3}
   fightSound: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
 --- !u!136 &7136770397205441253

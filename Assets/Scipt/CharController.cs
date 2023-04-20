@@ -115,4 +115,9 @@ public class CharController : MonoBehaviour
     {
         score += points;
     }
+
+    public void AddHealth(int upHealth)
+    {
+        health+= upHealth;
+    }
 }
