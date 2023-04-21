@@ -22,10 +22,11 @@ public class Level1 : MonoBehaviour
 
     void Update()
     {
-        if (MyPauseMenu == null)
+        /*if (MyPauseMenu == null)
         {
             MyPauseMenu = GameObject.Find("MyPauseMenu");
-        }
+        }*/
+      
         // 自動保存生命值，然後切換到 Level 2
         if (Time.timeSinceLevelLoad >= 15f)
         {
@@ -33,7 +34,7 @@ public class Level1 : MonoBehaviour
             PlayerPrefs.SetInt("health", 50);
             PlayerPrefs.SetFloat("attack", 20f);
             /*MyPauseMenu.SetActive(true);*/
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene("Level2");
 
         }
     }

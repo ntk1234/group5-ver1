@@ -7,6 +7,7 @@ public class Level3 : MonoBehaviour
 {
     public GameObject Wall;
     public GameObject Wall2;
+    public GameObject Heart;
     void Start()
     {
         // 讀取當前的生命值和各項能力系數
@@ -29,7 +30,12 @@ public class Level3 : MonoBehaviour
             Wall.SetActive(true);
             Wall2.SetActive(true);
         }
-            if (Time.timeSinceLevelLoad >= 18f)
+        if (Time.timeSinceLevelLoad >= 7f)
+        {
+            Heart.SetActive(true);
+
+        }
+        if (Time.timeSinceLevelLoad >= 18f)
         {
            // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);

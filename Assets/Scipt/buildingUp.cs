@@ -20,15 +20,23 @@ public class buildingUp : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CharController playerController = other.gameObject.GetComponent<CharController>();
+           
+            Die();
+        }
+    }
 
-  
 
     private void Die()
     {
         CharController playerController = FindObjectOfType<CharController>();
         if (playerController != null)
         {
-            playerController.AddHealth(uphpValue); // 增加分数
+            playerController.AddHealth(uphpValue); 
         }
 
         Destroy(gameObject);
