@@ -31,6 +31,7 @@ public class Weapon : MonoBehaviour
                 enemyComponent.TakeDamage(integerDamage); // 使用 integerDamage 變數
             }
         }
+        
     }
 
     private void OnDrawGizmosSelected()
