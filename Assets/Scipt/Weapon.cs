@@ -1,18 +1,24 @@
-using System.Collections;
+嚜簑sing System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
     public BoxCollider attackRangeObject;
-    public int integerDamage = 10; // 將整數攻擊力改為 integerDamage 變數
-    public float damage = 10.0f; // 浮點數攻擊力
+    public float damage = 10.0f;
+    public float attackInterval = 0.5f;
+    private float lastAttackTime;
 
     private void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
             Attack();
+        }
+        else if (Input.GetButton("Fire1") && Time.time >= lastAttackTime + attackInterval)
+        {
+            AttackBuilding();
+            lastAttackTime = Time.time;
         }
     }
 
@@ -28,12 +34,31 @@ public class Weapon : MonoBehaviour
             Enemy enemyComponent = enemy.GetComponent<Enemy>();
             if (enemyComponent != null)
             {
-                enemyComponent.TakeDamage(integerDamage); // 使用 integerDamage 變數
+                enemyComponent.TakeDamage((int)damage);
             }
         }
-        
     }
 
+    private void AttackBuilding()
+    {
+        if (attackRangeObject != null)
+        {
+            Collider[] hitBuildings = Physics.OverlapBox(
+                attackRangeObject.bounds.center,
+                attackRangeObject.bounds.extents,
+                attackRangeObject.transform.rotation);
+
+            foreach (Collider building in hitBuildings)
+            {
+                Building buildingComponent = building.GetComponent<Building>();
+                if (buildingComponent != null)
+                {
+                    buildingComponent.TakeDamage((int)damage);
+                }
+            }
+        }
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

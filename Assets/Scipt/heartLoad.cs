@@ -4,21 +4,22 @@ using UnityEngine;
 
 public class heartLoad : MonoBehaviour
 {
-    public GameObject Heart;
-    // Start is called before the first frame update
-    void Start()
+    public GameObject heartPrefab;
+    public float delayTime = 5.0f;
+
+    private bool hasHeart;
+
+    private void Start()
     {
-        
+        Invoke("SpawnHeart", delayTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void SpawnHeart()
     {
-        if (Time.timeSinceLevelLoad >= 5f)
+        if (!hasHeart)
         {
-            Heart.SetActive(true);
-
-
+            Instantiate(heartPrefab, transform.position, Quaternion.identity);
+            hasHeart = true;
         }
     }
 }

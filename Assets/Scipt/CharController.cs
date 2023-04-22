@@ -65,20 +65,20 @@ public class CharController : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
         healthSlider.value = health;
 
-        if (health <= 0 && !isGameOver)
+       /* if (health <= 0 && !isGameOver)
         {
             isGameOver = true;
             GameOver();
-        }
+        }*/
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if (health <= 0 && !isGameOver)
+        if (health <= 0 /*&& !isGameOver*/)
         {
-            isGameOver = true;
-            
+            /*isGameOver = true;
+            */
             GameOver();
         }
     }
