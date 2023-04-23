@@ -25,7 +25,7 @@ public class Level3 : MonoBehaviour
         // 自動保存生命值，然後切換到 Level 2
       
       
-        if (Time.timeSinceLevelLoad >= 18f)
+        if (Time.timeSinceLevelLoad >= 17f)
         {
            // 保存生命值和攻擊力
             PlayerPrefs.SetInt("health", 50);
