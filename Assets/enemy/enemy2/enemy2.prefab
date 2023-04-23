@@ -94,6 +94,7 @@ GameObject:
   - component: {fileID: 7174761385031372211}
   - component: {fileID: 3937819544835396320}
   - component: {fileID: 2295054859020036964}
+  - component: {fileID: 517180193146232864}
   m_Layer: 0
   m_Name: enemy2
   m_TagString: Enemy
@@ -116,7 +117,7 @@ Transform:
   - {fileID: 6332195102030632662}
   - {fileID: 4044746487656509545}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3937819544835396320
 MonoBehaviour:
@@ -151,6 +152,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &517180193146232864
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555368761567237897}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.004058541, y: 0.0024417208, z: 0.0067007584}
+  m_Center: {x: -0.000022344408, y: 0.000022895165, z: 0.0013433344}
 --- !u!1 &8040901733544843324
 GameObject:
   m_ObjectHideFlags: 0

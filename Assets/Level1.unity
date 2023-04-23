@@ -2130,7 +2130,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1613265408}
   - component: {fileID: 1613265407}
-  - component: {fileID: 1613265406}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2138,14 +2137,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1613265406
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1613265405}
-  m_Enabled: 1
 --- !u!20 &1613265407
 Camera:
   m_ObjectHideFlags: 0
@@ -2656,17 +2647,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 18.000002, y: 32, z: 10.000001}
   m_Center: {x: 0, y: 16, z: 0}
---- !u!114 &543450653293042646 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1219136511018583887, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
-  m_PrefabInstance: {fileID: 8171591222189164124}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: af56d3d9d03f63a4c970fa8089e603de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &4323070262397831965
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2727,14 +2707,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: weapon
-      value: 
-      objectReference: {fileID: 543450653293042646}
-    - target: {fileID: 0}
-      propertyPath: charController
-      value: 
-      objectReference: {fileID: 7136770397205441250}
     - target: {fileID: 4323070262758880287, guid: 8567c75766aaeeb4daf5941c0f2a451c, type: 3}
       propertyPath: Heart
       value: 
@@ -2750,17 +2722,6 @@ PrefabInstance:
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8567c75766aaeeb4daf5941c0f2a451c, type: 3}
---- !u!114 &7136770397205441250 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1327915612399021246, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
-  m_PrefabInstance: {fileID: 8171591222189164124}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cb1ac1f61fb0e10499c62bb3e71a0583, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &8171591222189164124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2828,6 +2789,10 @@ PrefabInstance:
     - target: {fileID: 6604170958150447772, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_Volume
       value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604170958150447772, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
