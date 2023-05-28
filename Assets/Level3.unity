@@ -904,7 +904,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1001 &442078900
@@ -1022,7 +1022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1 &462715991
@@ -1069,7 +1069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1 &531199235
@@ -1222,7 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1 &657350989
@@ -1953,7 +1953,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1 &1038121873
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7f0725d9c959fa4083ff419de53638b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 8084888492003994196, guid: b7a74a5c2f69ae04a82899e19123b46d, type: 3}
+  enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 5
   spawnInterval: 3
 --- !u!1 &1148617720
