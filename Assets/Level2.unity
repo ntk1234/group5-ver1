@@ -653,7 +653,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!136 &338753327 stripped
 CapsuleCollider:
   m_CorrespondingSourceObject: {fileID: 5927659608515455676, guid: 9ded2a62b96b50343abe42d04fd6a3cd, type: 3}
@@ -764,7 +764,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &462715991
 GameObject:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &531199235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7555368761567237897, guid: 0b20e846279a5924da599b9a426ddf7f, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &781181703 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4588491667940653216, guid: 5799c011f8d2a194689841dbbc9599c0, type: 3}
@@ -1675,7 +1675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 8084888492003994196, guid: cdc23ad2296e62140b975192513e0ea8, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &1038121873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1722,7 +1722,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7555368761567237897, guid: 0b20e846279a5924da599b9a426ddf7f, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &1064042722
 GameObject:
   m_ObjectHideFlags: 0
@@ -2054,7 +2054,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7555368761567237897, guid: 0b20e846279a5924da599b9a426ddf7f, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &1256881318
 GameObject:
   m_ObjectHideFlags: 0
@@ -2762,7 +2762,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 7555368761567237897, guid: 0b20e846279a5924da599b9a426ddf7f, type: 3}
   maxEnemies: 10
-  spawnInterval: 4
+  spawnInterval: 3
 --- !u!1 &2121215873
 GameObject:
   m_ObjectHideFlags: 0
@@ -7531,8 +7531,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9618eed5c646997458dfc18899c66b31, type: 2}
-  - {fileID: 2100000, guid: b6a8bdd36d830bf4cbf6dc8ec310ca73, type: 2}
+  - {fileID: 2100000, guid: 4f7522ed22f3f464ebf5aabb5e817285, type: 2}
+  - {fileID: 2100000, guid: 9ec33f1ab849d93439135fffe9250c7f, type: 2}
   - {fileID: 2100000, guid: fa4008aeaf9a39b4791652ab0f1a096d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
