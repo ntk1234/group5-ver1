@@ -87,7 +87,7 @@ public class CharController : MonoBehaviour
     {
         
         death.SetActive(true);
-        /*PlayerPrefs.SetInt("health", health); // ±Nhealth­È«O¦s¨ìPlayerPrefs¤¤*/
+        /*PlayerPrefs.SetInt("health", health); // ï¿½Nhealthï¿½È«Oï¿½sï¿½ï¿½PlayerPrefsï¿½ï¿½*/
         SceneManager.LoadScene("Title");
         Invoke("Restart", gameOverDelay);
         

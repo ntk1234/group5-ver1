@@ -13,8 +13,8 @@ public class Level2 : MonoBehaviour
 
     void Update()
     {
-       
-        if (Time.timeSinceLevelLoad >= 20f)
+        // �۰ʫO�s�ͩR�ȡA�M������� Level 2
+        if (Time.timeSinceLevelLoad >= 60f)
         {
          
         

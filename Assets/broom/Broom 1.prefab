@@ -4969,7 +4969,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2842924408608763516}
   - component: {fileID: 4716057211026289850}
-  - component: {fileID: 8741838200379733599}
   m_Layer: 0
   m_Name: Broom 1
   m_TagString: Untagged
@@ -5012,28 +5011,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRangeObject: {fileID: 6175853860173072810}
+  integerDamage: 10
   damage: 50
-  attackInterval: 0.5
---- !u!95 &8741838200379733599
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3188486978305389766}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 043e2ec925cfb32488a422d4f59a72e1, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6000961332836081108
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,12 +8,12 @@ public class Level3 : MonoBehaviour
  
     void Start()
     {
-        // Åª¨ú·í«eªº¥Í©R­È©M¦U¶µ¯à¤O¨t¼Æ
+        // Åªï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½ï¿½Í©Rï¿½È©Mï¿½Uï¿½ï¿½ï¿½ï¿½Oï¿½tï¿½ï¿½
         int health = PlayerPrefs.GetInt("health");
         float power = PlayerPrefs.GetFloat("power");
         float attack = PlayerPrefs.GetFloat("attack");
 
-        // ¿é¥XÅª¨ú¨ìªº¼Æ¾Ú
+        // ï¿½ï¿½XÅªï¿½ï¿½ï¿½ìªºï¿½Æ¾ï¿½
         Debug.Log("Health: " + health);
         Debug.Log("Power: " + power);
         Debug.Log("Attack: " + attack);
@@ -22,12 +22,12 @@ public class Level3 : MonoBehaviour
 
     void Update()
     {
-        // ¦Û°Ê«O¦s¥Í©R­È¡AµM«á¤Á´«¨ì Level 2
+        // ï¿½Û°Ê«Oï¿½sï¿½Í©Rï¿½È¡Aï¿½Mï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Level 2
       
       
-        if (Time.timeSinceLevelLoad >= 17f)
+        if (Time.timeSinceLevelLoad >= 60f)
         {
-           // «O¦s¥Í©R­È©M§ðÀ»¤O
+           // ï¿½Oï¿½sï¿½Í©Rï¿½È©Mï¿½ï¿½ï¿½ï¿½ï¿½O
             PlayerPrefs.SetInt("health", 50);
             PlayerPrefs.SetFloat("attack", 20f);
 
