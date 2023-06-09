@@ -2,7 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class Timer : MonoBehaviour {
+public class Timer3 : MonoBehaviour {
 
 	public float myTimer=0;
 
@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour {
 
 	void Update () {
 		myTimer += Time.deltaTime;
-		text.text = (myTimer).ToString("'Survive(30s):'00");
+		text.text = (myTimer).ToString("'Survive(80s):'00");
 	}
 }
 
