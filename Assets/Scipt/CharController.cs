@@ -50,13 +50,13 @@ public class CharController : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKey("k"))
+        if (Input.GetKeyDown("k"))
         {
             anim.SetTrigger("attack");
             myAduioSource.PlayOneShot(fightSound);
         }
 
-        if (Input.GetKey("l"))
+        if (Input.GetKeyDown("l"))
         {
             anim.SetTrigger("moveAttack");
             myAduioSource.PlayOneShot(hitSound);
