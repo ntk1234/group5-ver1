@@ -13,7 +13,7 @@ public class Gun : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButton("Fire2") && Time.time > nextFireTime)
+        if (Input.GetKey("l") && Time.time > nextFireTime)
         {
             nextFireTime = Time.time + fireRate;
             FireBullet();
