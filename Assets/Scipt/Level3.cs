@@ -25,7 +25,7 @@ public class Level3 : MonoBehaviour
         // �۰ʫO�s�ͩR�ȡA�M������� Level 2
       
       
-        if (Time.timeSinceLevelLoad >= 80f)
+        if (Time.timeSinceLevelLoad >= 60f)
         {
            // �O�s�ͩR�ȩM�����O
             PlayerPrefs.SetInt("health", 50);

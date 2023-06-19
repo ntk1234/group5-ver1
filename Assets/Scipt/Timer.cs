@@ -14,7 +14,7 @@ public class Timer : MonoBehaviour {
 
 	void Update () {
 		myTimer += Time.deltaTime;
-		text.text = (myTimer).ToString("'Survive(30s):'00");
+		text.text = (myTimer).ToString("'Survive(60s):'00");
 	}
 }
 
