@@ -645,6 +645,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1327915612399021245}
   - component: {fileID: 1327915612389325439}
+  - component: {fileID: 2449691934947255625}
+  - component: {fileID: 4672325532981488758}
   - component: {fileID: 1327915612399021246}
   - component: {fileID: 1327915612401950057}
   - component: {fileID: 1327915612394279225}
@@ -674,7 +676,7 @@ Transform:
   - {fileID: 8171591221806980762}
   - {fileID: 8569764698059996993}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1327915612389325439
 Animator:
@@ -696,6 +698,39 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2449691934947255625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327915612398770489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f976ded10de43d64d818242edafddc47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 0
+--- !u!114 &4672325532981488758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1327915612398770489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94d66d0cc828294da021a1982fbb7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 0}
+  attackPoint: {fileID: 0}
+  objectToThrow: {fileID: 0}
+  totalThrows: 0
+  throwCooldown: 0
+  throwKey: 102
+  throwForce: 0
+  throwUpwardForce: 0
 --- !u!114 &1327915612399021246
 MonoBehaviour:
   m_ObjectHideFlags: 0
