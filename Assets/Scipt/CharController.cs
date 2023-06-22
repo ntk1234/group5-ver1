@@ -18,8 +18,9 @@ public class CharController : MonoBehaviour
     public GameObject death;
     public float gameOverDelay = 0.1f;
     private bool isGameOver = false;
-    public AudioClip hitSound;
+   
     public AudioClip fightSound;
+    public AudioClip hitSound;
     private AudioSource myAduioSource;
     void Start()
     {
@@ -53,13 +54,13 @@ public class CharController : MonoBehaviour
         if (Input.GetKeyDown("k"))
         {
             anim.SetTrigger("attack");
-            myAduioSource.PlayOneShot(fightSound);
+           
         }
 
-        if (Input.GetKeyDown("l"))
+        if (Input.GetKeyDown("l")| Input.GetKeyDown("j"))
         {
             anim.SetTrigger("moveAttack");
-            myAduioSource.PlayOneShot(hitSound);
+            
         }
 
         scoreText.text = "Score: " + score.ToString();
@@ -119,5 +120,15 @@ public class CharController : MonoBehaviour
     public void AddHealth(int upHealth)
     {
         health+= upHealth;
+    }
+    public void PlayFightSound()
+    {
+        myAduioSource.clip = fightSound;
+        myAduioSource.Play();
+    }
+    public void PlayShootSound()
+    {
+        myAduioSource.clip = hitSound;
+        myAduioSource.Play();
     }
 }

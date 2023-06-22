@@ -5,6 +5,9 @@ using TMPro;
 
 public class ThrowingTutorial : MonoBehaviour
 {
+
+    
+
     [Header("References")]
     public Transform cam;
     public Transform attackPoint;
@@ -31,6 +34,7 @@ public class ThrowingTutorial : MonoBehaviour
         {
             Throw();
         }
+      
     }
 
     private void Throw()
@@ -54,4 +58,8 @@ public class ThrowingTutorial : MonoBehaviour
     {
         readyToThrow = true;
     }
+
+   
+
+   
 }

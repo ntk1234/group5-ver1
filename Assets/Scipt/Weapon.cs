@@ -8,21 +8,32 @@ public class Weapon : MonoBehaviour
     public float damage = 10.0f;
     public float attackInterval = 0.5f;
     private float lastAttackTime;
+   
+
+    
+
+    void Start()
+    {
+       
+        
+    }
 
     private void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetKeyDown("k"))
         {
             Attack();
+           
         }
-        else if (Input.GetButton("Fire1") && Time.time >= lastAttackTime + attackInterval)
+        else if (Input.GetKeyDown("k") && Time.time >= lastAttackTime + attackInterval)
         {
             AttackBuilding();
             lastAttackTime = Time.time;
         }
     }
+    
 
-    private void Attack()
+private void Attack()
     {
         Collider[] hitEnemies = Physics.OverlapBox(
             attackRangeObject.bounds.center,
@@ -64,4 +75,6 @@ public class Weapon : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(attackRangeObject.bounds.center, attackRangeObject.bounds.size);
     }
+
+
 }

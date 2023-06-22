@@ -748,8 +748,8 @@ MonoBehaviour:
   score: 0
   death: {fileID: 0}
   gameOverDelay: 2
-  hitSound: {fileID: 8300000, guid: 8d650c990cdee73498c20b79c9dcec9f, type: 3}
   fightSound: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
+  hitSound: {fileID: 8300000, guid: 8d650c990cdee73498c20b79c9dcec9f, type: 3}
 --- !u!54 &1327915612401950057
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4052,8 +4052,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8171591221806980761}
-  m_LocalRotation: {x: 0.000000028870998, y: -0.0000000021966902, z: -0.000000037246313, w: 1}
-  m_LocalPosition: {x: 0.014, y: 1.246, z: 0.652}
+  m_LocalRotation: {x: 0.000000027939649, y: -0.000000031999022, z: 0.000000052160715, w: 1}
+  m_LocalPosition: {x: 0.013999978, y: 1.2460002, z: 0.6520003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
