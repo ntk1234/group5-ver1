@@ -36,14 +36,20 @@ public class CharController1: MonoBehaviour
 
     void Update()
     {
-        float h = Input.GetAxis("Horizontal");
-        float v = Input.GetAxis("Vertical");
+     
+
+        float h = Input.GetAxis("Horizontal2");
+        float v = Input.GetAxis("Vertical2");
+
         Vector2 move = new Vector2(h, v);
         anim.SetFloat("speed", move.magnitude);
 
         moveDirection = new Vector3(h, 0, v);
         moveDirection = Camera.main.transform.TransformDirection(moveDirection);
         moveDirection.y = 0;
+
+       
+     
 
         if (moveDirection != Vector3.zero)
         {

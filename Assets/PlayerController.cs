@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 
-public class PlayerControl : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
    
     [SerializeField]
@@ -19,17 +19,17 @@ public class PlayerControl : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
 
-    private Vector2 movementInput = Vector2.zero;
+    private Vector3 movementInput = Vector3.zero;
     private bool jumped = false;
 
 
     private void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        controller = gameObject.GetComponent<CharacterController>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
-    {   movementInput = context.ReadValue<Vector2>(); 
+    {   movementInput = context.ReadValue<Vector3>(); 
         }
 
     public void OnJump(InputAction.CallbackContext context)
@@ -46,7 +46,7 @@ public class PlayerControl : MonoBehaviour
             playerVelocity.y = 0f;
         }
 
-        Vector3 move = new Vector3(movementInput.x, 0, movementInput.y);
+        Vector3 move = new Vector3(movementInput.x, 0f, movementInput.y);
         controller.Move(move * Time.deltaTime * playerSpeed);
 
       

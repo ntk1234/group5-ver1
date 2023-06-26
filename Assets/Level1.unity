@@ -2553,7 +2553,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b7d33c284e780a4cb09259c2e7c66fb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.99
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1b7d33c284e780a4cb09259c2e7c66fb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4307,14 +4307,16 @@ GameObject:
   - component: {fileID: 4203376514607720365}
   - component: {fileID: 4203376514616830973}
   - component: {fileID: 4203376514610612379}
+  - component: {fileID: 8331213885315106912}
   - component: {fileID: 4203376514610522303}
   - component: {fileID: 4203376514604815997}
   - component: {fileID: 8331213885315106904}
   - component: {fileID: 8331213885315106906}
   - component: {fileID: 8331213885315106905}
-  - component: {fileID: 8331213885315106908}
   - component: {fileID: 8331213885315106910}
+  - component: {fileID: 8331213885315106908}
   - component: {fileID: 8331213885315106909}
+  - component: {fileID: 8331213885315106911}
   m_Layer: 0
   m_Name: ThirdPersonController (2)
   m_TagString: Player
@@ -4330,7 +4332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4203376514604540925}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.47, y: 0.31, z: 0.068875}
+  m_LocalPosition: {x: 5.47, y: 5.01, z: 0.068875}
   m_LocalScale: {x: 4.7926755, y: 4.7926755, z: 4.7926755}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4345,7 +4347,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4203376514604540925}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb1ac1f61fb0e10499c62bb3e71a0583, type: 3}
   m_Name: 
@@ -4394,7 +4396,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4203376514604540925}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ce7a80d520cacc042b5fe14f373d8173, type: 3}
   m_Name: 
@@ -4615,9 +4617,21 @@ PrefabInstance:
       propertyPath: fightSound
       value: 
       objectReference: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
+    - target: {fileID: 1327915612387938939, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327915612388045407, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1327915612398770489, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_Name
       value: ThirdPersonController
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327915612398770489, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1327915612399021245, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_RootOrder
@@ -4993,7 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 2c4c8c39e2e0c2541b5b411cc89a0887, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: f1304896760ee3846bed04595127dca0, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -5007,9 +5021,17 @@ MonoBehaviour:
       m_Calls: []
   m_ActionEvents:
   - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b6299986-5dc0-4ada-a663-65da4afcc905
+    m_ActionName: Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e7a3d29a-19c3-4716-b676-f985771d4476
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 8331213885315106910}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: OnMove
         m_Mode: 0
         m_Arguments:
@@ -5020,31 +5042,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 0d3bf99c-b19f-4ecb-8bb7-e3ec47491582
-    m_ActionName: Player/Movement[/Keyboard/5,/Keyboard/2,/Keyboard/1,/Keyboard/3]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 4fb317cf-5f0d-4e6e-a9ef-eb4284ae053c
-    m_ActionName: Player/attack[/Keyboard/b,/Keyboard/n,/Keyboard/m]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8331213885315106910}
-        m_TargetAssemblyTypeName: PlayerControl, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: bba93698-bf8e-4f1f-86dd-4ae0de33f8ce
-    m_ActionName: Player/jump[/Keyboard/space]
+    m_ActionId: 56293bbc-8702-4ddd-9852-9eb3f3d6a3f1
+    m_ActionName: Player2/Movement1[/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]
   m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: keyboad
-  m_DefaultActionMap: Player
+  m_DefaultControlScheme: Keyboard
+  m_DefaultActionMap: Player2
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &8331213885315106910
@@ -5059,6 +5061,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c9c3b42a5286fb4db29e7a77a1edb4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpeed: 2
+  playerSpeed: 3
   jumpHeight: 1
   gravityValue: -9.81
+--- !u!114 &8331213885315106911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203376514604540925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4d84710464f2494eb6dd034d1f91b66, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotSpeed: 10
+  health: 100
+  score: 0
+  death: {fileID: 0}
+  gameOverDelay: 0.1
+  fightSound: {fileID: 0}
+  hitSound: {fileID: 0}
+--- !u!114 &8331213885315106912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4203376514604540925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc5d82d9ef373d74f9900fe052bb695f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
