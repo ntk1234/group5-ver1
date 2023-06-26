@@ -171,9 +171,9 @@ MonoBehaviour:
   attackPoint: {fileID: 12793537}
   objectToThrow: {fileID: 8765566903127257710, guid: 7e50e7ffeadf8a24fb1e8be4576ba18c, type: 3}
   totalThrows: 100
-  throwCooldown: 0
+  throwCooldown: 0.2
   throwKey: 106
-  throwForce: 70
+  throwForce: 10
   throwUpwardForce: 0
 --- !u!1 &48357952
 GameObject:
@@ -223,9 +223,9 @@ MonoBehaviour:
   attackPoint: {fileID: 48357953}
   objectToThrow: {fileID: 8765566903127257710, guid: 7e50e7ffeadf8a24fb1e8be4576ba18c, type: 3}
   totalThrows: 100
-  throwCooldown: 0
+  throwCooldown: 0.2
   throwKey: 106
-  throwForce: 70
+  throwForce: 10
   throwUpwardForce: 0
 --- !u!1001 &71457385
 PrefabInstance:
@@ -455,6 +455,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &175329986 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8171591221806980762, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+  m_PrefabInstance: {fileID: 8171591222189164124}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &240603195
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,6 +2068,58 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &813580266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 813580267}
+  - component: {fileID: 813580268}
+  m_Layer: 0
+  m_Name: gunpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &813580267
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813580266}
+  m_LocalRotation: {x: -0.000000059604645, y: 0.00000017881393, z: 0.00000010430813, w: 1}
+  m_LocalPosition: {x: 0.056600012, y: 0, z: 0.021000005}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 890732850}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &813580268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 813580266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94d66d0cc828294da021a1982fbb7d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 1555775112}
+  attackPoint: {fileID: 175329986}
+  objectToThrow: {fileID: 1368344467703324787, guid: 34c6fcef0c03cd74d97e959adc279f35, type: 3}
+  totalThrows: 2147483647
+  throwCooldown: 0.1
+  throwKey: 108
+  throwForce: 5
+  throwUpwardForce: 0
 --- !u!1 &856260157
 GameObject:
   m_ObjectHideFlags: 0
@@ -2792,7 +2849,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1243316693}
   objectToThrow: {fileID: 8765566903127257710, guid: 7e50e7ffeadf8a24fb1e8be4576ba18c, type: 3}
   totalThrows: 100
-  throwCooldown: 0
+  throwCooldown: 0.2
   throwKey: 106
   throwForce: 70
   throwUpwardForce: 0
@@ -3429,9 +3486,9 @@ MonoBehaviour:
   attackPoint: {fileID: 1630149265}
   objectToThrow: {fileID: 8765566903127257710, guid: 7e50e7ffeadf8a24fb1e8be4576ba18c, type: 3}
   totalThrows: 100
-  throwCooldown: 0
+  throwCooldown: 0.2
   throwKey: 106
-  throwForce: 70
+  throwForce: 10
   throwUpwardForce: 0
 --- !u!1 &1705965880 stripped
 GameObject:
@@ -3839,9 +3896,9 @@ MonoBehaviour:
   attackPoint: {fileID: 1923627845}
   objectToThrow: {fileID: 8765566903127257710, guid: 7e50e7ffeadf8a24fb1e8be4576ba18c, type: 3}
   totalThrows: 100
-  throwCooldown: 0
+  throwCooldown: 0.2
   throwKey: 106
-  throwForce: 70
+  throwForce: 10
   throwUpwardForce: 0
 --- !u!1 &2001052635 stripped
 GameObject:
@@ -4536,7 +4593,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8d650c990cdee73498c20b79c9dcec9f, type: 3}
     - target: {fileID: 8171591221806980763, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9053989221379147571, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_IsActive
@@ -4553,6 +4610,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8391253441885587653, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       insertIndex: 6
       addedObject: {fileID: 3823503032174569594}
+    - targetCorrespondingSourceObject: {fileID: 8569764698808894870, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 813580267}
     - targetCorrespondingSourceObject: {fileID: 8569764698808894870, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1243316693}
