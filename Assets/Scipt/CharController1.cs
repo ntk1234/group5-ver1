@@ -57,13 +57,13 @@ public class CharController1: MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, newRotation, rotSpeed * Time.deltaTime);
         }
 
-        if (Input.GetKeyDown("k"))
+        if (Input.GetKeyDown("[2]"))
         {
             anim.SetTrigger("attack");
            
         }
 
-        if (Input.GetKeyDown("l")| Input.GetKeyDown("j"))
+        if (Input.GetKeyDown("[1]")| Input.GetKeyDown("[3]"))
         {
             anim.SetTrigger("moveAttack");
             

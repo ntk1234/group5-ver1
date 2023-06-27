@@ -25,8 +25,8 @@ public class Playermovement : MonoBehaviour
 
     private void MoveLikeWow()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal2");
+        var vertical = Input.GetAxis("Vertical2");
 
         var move = transform.forward * Speed * vertical * Time.deltaTime;
         controller.Move(move);
@@ -35,8 +35,8 @@ public class Playermovement : MonoBehaviour
     }
     private void MoveLikeTopDown()
     {
-        var horizontal = Input.GetAxis("Horizontal");
-        var vertical = Input.GetAxis("Vertical");
+        var horizontal = Input.GetAxis("Horizontal2");
+        var vertical = Input.GetAxis("Vertical2");
 
         var direction = new Vector3(horizontal, 0, vertical).normalized;
         var move = direction * Speed * Time.deltaTime;

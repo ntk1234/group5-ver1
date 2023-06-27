@@ -16,7 +16,7 @@ public class Level1 : MonoBehaviour
 
     void Update()
     {
-        if (Time.timeSinceLevelLoad >= 40f)
+        if (Time.timeSinceLevelLoad >= 35f)
         {
 
             SceneManager.LoadScene("Level2");
