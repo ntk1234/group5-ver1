@@ -9,12 +9,12 @@ public class CharController1: MonoBehaviour
     Animator anim;
     public float rotSpeed = 10;
     Vector3 moveDirection;
-    public int health = 100;
+    public int health2 = 100;
     public int score = 0;
     private CharacterController characterController;
     private Animator animator;
     public static Text scoreText;
-    public static Slider healthSlider;
+    public static Slider healthSlider2;
     public GameObject death;
     public float gameOverDelay = 0.1f;
     private bool isGameOver = false;
@@ -28,9 +28,9 @@ public class CharController1: MonoBehaviour
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
-        healthSlider = GameObject.Find("HealthSlider").GetComponent<Slider>();
-        healthSlider.maxValue = health;
-        healthSlider.value = health;
+        healthSlider2 = GameObject.Find("HealthSlider2P").GetComponent<Slider>();
+        healthSlider2.maxValue = health2;
+        healthSlider2.value = health2;
         myAduioSource = GetComponent<AudioSource>();
     }
 
@@ -59,18 +59,24 @@ public class CharController1: MonoBehaviour
 
         if (Input.GetKeyDown("[2]"))
         {
-            anim.SetTrigger("attack");
+            anim.SetTrigger("punch");
            
         }
 
-        if (Input.GetKeyDown("[1]")| Input.GetKeyDown("[3]"))
+        if (Input.GetKeyDown("[1]"))
         {
-            anim.SetTrigger("moveAttack");
+            anim.SetTrigger("kick");
             
         }
+        if ( Input.GetKeyDown("[3]"))
+        {
+            anim.SetTrigger("fireball");
+
+        }
+
 
         scoreText.text = "Score: " + score.ToString();
-        healthSlider.value = health;
+        healthSlider2.value = health2;
 
        /* if (health <= 0 && !isGameOver)
         {
@@ -81,8 +87,8 @@ public class CharController1: MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
-        if (health <= 0 /*&& !isGameOver*/)
+        health2 -= damage;
+        if (health2 <= 0 /*&& !isGameOver*/)
         {
             /*isGameOver = true;
             */
@@ -92,17 +98,19 @@ public class CharController1: MonoBehaviour
 
     void GameOver()
     {
-        
+
         death.SetActive(true);
-        /*PlayerPrefs.SetInt("health", health); // �Nhealth�ȫO�s��PlayerPrefs��*/
+        healthSlider2.value = 0;
         SceneManager.LoadScene("Title");
         Invoke("Restart", gameOverDelay);
-        
+
     }
 
     void Restart()
     {
-        
+
+        health2 = 100; // 重置血量值
+        healthSlider2.value = health2; // 更新血量條顯示
         SceneManager.LoadScene("Title");
     }
 
@@ -125,7 +133,7 @@ public class CharController1: MonoBehaviour
 
     public void AddHealth(int upHealth)
     {
-        health+= upHealth;
+        health2+= upHealth;
     }
     public void PlayFightSound()
     {
