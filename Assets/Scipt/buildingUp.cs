@@ -25,7 +25,7 @@ public class buildingUp : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CharController playerController = other.gameObject.GetComponent<CharController>();
-           
+            CharController1 playerController1 = other.gameObject.GetComponent<CharController1>();
             Die();
         }
     }
@@ -34,9 +34,14 @@ public class buildingUp : MonoBehaviour
     private void Die()
     {
         CharController playerController = FindObjectOfType<CharController>();
+        CharController1 playerController1 = FindObjectOfType<CharController1>();
         if (playerController != null)
         {
             playerController.AddHealth(uphpValue); 
+        }
+        if (playerController1 != null)
+        {
+            playerController1.AddHealth(uphpValue);
         }
 
         Destroy(gameObject);

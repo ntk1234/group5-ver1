@@ -11,7 +11,7 @@ public class CharController1: MonoBehaviour
     Vector3 moveDirection;
     public int health2 = 100;
     public int score = 0;
-    private CharacterController characterController;
+    private CharacterController characterController1;
     private Animator animator;
     public static Text scoreText;
     public static Slider healthSlider2;
@@ -25,7 +25,7 @@ public class CharController1: MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
-        characterController = GetComponent<CharacterController>();
+        characterController1 = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         healthSlider2 = GameObject.Find("HealthSlider2P").GetComponent<Slider>();
