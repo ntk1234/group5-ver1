@@ -21,6 +21,7 @@ public class CharController1: MonoBehaviour
    
     public AudioClip fightSound;
     public AudioClip hitSound;
+    public AudioClip kickSound;
     private AudioSource myAduioSource;
     void Start()
     {
@@ -143,6 +144,11 @@ public class CharController1: MonoBehaviour
     public void PlayShootSound()
     {
         myAduioSource.clip = hitSound;
+        myAduioSource.Play();
+    }
+    public void PlayKickSound()
+    {
+        myAduioSource.clip = kickSound;
         myAduioSource.Play();
     }
 }
