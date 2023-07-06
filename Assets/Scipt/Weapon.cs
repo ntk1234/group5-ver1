@@ -25,7 +25,18 @@ public class Weapon : MonoBehaviour
             Attack();
            
         }
+
+        if (Input.GetKeyDown("[1]"))
+        {
+            Attack();
+
+        }
         else if (Input.GetKeyDown("k") && Time.time >= lastAttackTime + attackInterval)
+        {
+            AttackBuilding();
+            lastAttackTime = Time.time;
+        }
+        else if (Input.GetKeyDown("[1]") && Time.time >= lastAttackTime + attackInterval)
         {
             AttackBuilding();
             lastAttackTime = Time.time;
