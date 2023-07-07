@@ -3820,7 +3820,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1075275789}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -13559,7 +13559,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackRangeObject: {fileID: 1075275791}
-  damage: 40
+  damage: 50
   attackInterval: 0.5
 --- !u!114 &8331213885315106913
 MonoBehaviour:
@@ -13568,7 +13568,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4203376514604540925}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ac6431e52ec07d6489c2ab9c67a23c1f, type: 3}
   m_Name: 

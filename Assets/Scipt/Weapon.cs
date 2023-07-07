@@ -61,6 +61,18 @@ private void Attack()
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Enemy enemyComponent = other.GetComponent<Enemy>();
+            if (enemyComponent != null)
+            {
+                enemyComponent.TakeDamage((int)damage);
+            }
+            
+        }
+    }
     private void AttackBuilding()
     {
         if (attackRangeObject != null)
