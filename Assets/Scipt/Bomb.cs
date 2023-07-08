@@ -14,7 +14,12 @@ public class Bomb : MonoBehaviour
     {
         // 如果碰撞物体是玩家，则触发爆炸效果
         CharController player = other.GetComponent<CharController>();
+        CharController1 player1 = other.GetComponent<CharController1>();
         if (player != null)
+        {
+            Explode();
+        }
+        if (player1 != null)
         {
             Explode();
         }
@@ -31,7 +36,12 @@ public class Bomb : MonoBehaviour
         // 播放声音
         if (explosionSound != null)
         {
-            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+            GameObject audioObject = new GameObject("ExplosionSound");
+            AudioSource audioSource = audioObject.AddComponent<AudioSource>();
+            audioSource.clip = explosionSound;
+            audioSource.volume = 0.3f;
+            audioSource.Play();
+            Destroy(audioObject, explosionSound.length);
         }
 
         // 查找所有在爆炸半径内的敌人，并对其造成伤害和推力

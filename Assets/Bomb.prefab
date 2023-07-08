@@ -34,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3755317762970797824
 MeshFilter:
@@ -114,7 +114,7 @@ MonoBehaviour:
   explosionRadius: 100
   explosionForce: 1000
   damage: 50
-  explosionEffectPrefab: {fileID: 0}
+  explosionEffectPrefab: {fileID: 100000, guid: 15ca5b8fa431dc04291a79cadcd19874, type: 3}
   explosionSound: {fileID: 8300000, guid: a0316d4a07128264c94180136a669255, type: 3}
 --- !u!82 &6384810909414130813
 AudioSource:
@@ -135,7 +135,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 0
   MinDistance: 1
   MaxDistance: 500
   Pan2D: 0

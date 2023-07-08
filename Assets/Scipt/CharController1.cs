@@ -11,9 +11,11 @@ public class CharController1: MonoBehaviour
     Vector3 moveDirection;
     public int health2 = 100;
     public int score = 0;
+     public static Text scoreText;
+     
     private CharacterController characterController1;
     private Animator animator;
-    public static Text scoreText;
+    
     public static Slider healthSlider2;
     public GameObject death;
     public float gameOverDelay = 0.1f;

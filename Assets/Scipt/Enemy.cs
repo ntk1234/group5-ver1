@@ -48,8 +48,9 @@ public class Enemy : MonoBehaviour
 
     private void Die()
     {
-        CharController playerController = FindObjectOfType<CharController>();
+       CharController playerController = FindObjectOfType<CharController>();
         CharController1 playerController1 = FindObjectOfType<CharController1>();
+        
         if (playerController != null)
         {
             playerController.AddScore(scoreValue); // 增加分数
@@ -58,6 +59,7 @@ public class Enemy : MonoBehaviour
         {
             playerController1.AddScore(scoreValue); // 增加分数
         }
+        
         Destroy(gameObject);
     }
 

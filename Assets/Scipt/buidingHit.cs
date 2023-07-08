@@ -23,11 +23,28 @@ public class buidingHit : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             CharController playerController = other.gameObject.GetComponent<CharController>();
+            CharController1 playerController1 = other.gameObject.GetComponent<CharController1>();
             if (playerController != null)
             {
                 playerController.TakeDamage(damage);
             }
-            
+            if (playerController1 != null)
+            {
+                playerController1.TakeDamage(damage);
+            }
         }
     }
+
+    /*private void OnCollisionEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            CharController playerController = other.gameObject.GetComponent<CharController>();
+            if (playerController != null)
+            {
+                playerController.TakeDamage(damage);
+            }
+
+        }
+    }*/
 }

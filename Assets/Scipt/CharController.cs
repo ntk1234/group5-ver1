@@ -10,9 +10,10 @@ public class CharController : MonoBehaviour
     public float rotSpeed = 10;
     Vector3 moveDirection;
     public int health = 100;
-    public int score = 0;
+    
     private CharacterController characterController;
     private Animator animator;
+    public int score = 0;
     public static Text scoreText;
     public static Slider healthSlider;
     public GameObject death;
@@ -64,6 +65,12 @@ public class CharController : MonoBehaviour
         }
 
         scoreText.text = "Score: " + score.ToString();
+
+        if (score >= 200)
+        {
+            DestroyBuilding();
+        }
+
         healthSlider.value = health;
 
        /* if (health <= 0 && !isGameOver)
@@ -130,5 +137,11 @@ public class CharController : MonoBehaviour
     {
         myAduioSource.clip = hitSound;
         myAduioSource.Play();
+    }
+    public GameObject buildingToDestroy;
+
+    void DestroyBuilding()
+    {
+        Destroy(buildingToDestroy);
     }
 }
