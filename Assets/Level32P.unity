@@ -9231,7 +9231,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 8
   m_IsActive: 1
 --- !u!64 &311825149
 MeshCollider:
@@ -83144,6 +83144,10 @@ PrefabInstance:
       propertyPath: fightSound
       value: 
       objectReference: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
+    - target: {fileID: 1327915612399021246, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: scoreCheck
+      value: 400
+      objectReference: {fileID: 0}
     - target: {fileID: 1327915612399021246, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: buildingToDestroy
       value: 

@@ -19,7 +19,8 @@ public class CharController : MonoBehaviour
     public GameObject death;
     public float gameOverDelay = 0.1f;
     private bool isGameOver = false;
-   
+    public int scoreCheck = 200;
+
     public AudioClip fightSound;
     public AudioClip hitSound;
     private AudioSource myAduioSource;
@@ -66,7 +67,7 @@ public class CharController : MonoBehaviour
 
         scoreText.text = "Score: " + score.ToString();
 
-        if (score >= 200)
+      if (score >= scoreCheck)
         {
             DestroyBuilding();
         }
@@ -138,7 +139,7 @@ public class CharController : MonoBehaviour
         myAduioSource.clip = hitSound;
         myAduioSource.Play();
     }
-    public GameObject buildingToDestroy;
+   public GameObject buildingToDestroy;
 
     void DestroyBuilding()
     {

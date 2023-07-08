@@ -14,8 +14,7 @@ public class Enemy : MonoBehaviour
 
     private void Start()
     {
-        target = FindObjectOfType<CharController>().transform;
-        target = FindObjectOfType<CharController1>().transform;
+        target = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
     private void Update()
