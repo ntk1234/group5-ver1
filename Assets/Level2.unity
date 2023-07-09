@@ -3205,7 +3205,7 @@ MonoBehaviour:
   target: {fileID: 7136770397205441249}
   distance: 20
   height: 30
-  damping: 1
+  damping: 0
   followSpeed: 10
   lockZRotation: 1
   rotationSpeed: 0
@@ -15136,8 +15136,10 @@ MonoBehaviour:
   score: 0
   death: {fileID: 1757168150}
   gameOverDelay: 2
+  scoreCheck: 200
   fightSound: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
   hitSound: {fileID: 8300000, guid: 8d650c990cdee73498c20b79c9dcec9f, type: 3}
+  buildingToDestroy: {fileID: 0}
 --- !u!136 &7136770397205441253
 CapsuleCollider:
   m_ObjectHideFlags: 0

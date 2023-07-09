@@ -81723,6 +81723,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: fly
       objectReference: {fileID: 0}
+    - target: {fileID: 3878574994860228125, guid: 7f0710ae1d4c3764f884c1b41f618a5c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4510539487501837479, guid: 7f0710ae1d4c3764f884c1b41f618a5c, type: 3}
       propertyPath: m_RootOrder
       value: 1
