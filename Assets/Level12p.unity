@@ -992,7 +992,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7874221490953257257, guid: 098c3ec04480a014499d9724cb24811a, type: 3}
   m_PrefabInstance: {fileID: 71457385}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &254394248
+--- !u!65 &254394252
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1003,7 +1003,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 21.000002, y: 26.999998, z: 25.000004}
   m_Center: {x: 0, y: 13.499999, z: 0}
 --- !u!1 &285660907
 GameObject:
@@ -9801,7 +9801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb2af970e8e438d85c4411fabade19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitForce: 25
+  hitForce: 5
 --- !u!114 &1081709457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9814,7 +9814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513c02822f7614d31b900c15ae9348de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 25
+  attackPower: 5
 --- !u!1 &1102403086
 GameObject:
   m_ObjectHideFlags: 0
@@ -11356,7 +11356,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1705965884
+--- !u!65 &1705965886
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11367,8 +11367,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 2, z: 2}
-  m_Center: {x: 0, y: 13.5, z: 0}
+  m_Size: {x: 16.999998, y: 27.000004, z: 18}
+  m_Center: {x: 0, y: 13.500002, z: 0}
 --- !u!1 &1718760817
 GameObject:
   m_ObjectHideFlags: 0
@@ -16003,7 +16003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 513c02822f7614d31b900c15ae9348de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPower: 25
+  attackPower: 5
 --- !u!114 &8331213885315106906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16016,7 +16016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfb2af970e8e438d85c4411fabade19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitForce: 25
+  hitForce: 5
 --- !u!143 &8331213885315106908
 CharacterController:
   m_ObjectHideFlags: 0

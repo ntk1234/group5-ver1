@@ -26,9 +26,14 @@ public class Building : MonoBehaviour
     private void Die()
     {
         CharController playerController = FindObjectOfType<CharController>();
+        CharController1 playerController1 = FindObjectOfType<CharController1>();
         if (playerController != null)
         {
             playerController.AddHealth(uphpValue); 
+        }
+        if (playerController1 != null)
+        {
+            playerController1.AddHealth(uphpValue);
         }
 
         Destroy(gameObject);
