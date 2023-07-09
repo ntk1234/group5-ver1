@@ -136,6 +136,8 @@ MonoBehaviour:
   moveSpeed: 6
   damageEffectPrefab: {fileID: 0}
   scoreValue: 15
+  detectionRadius: 1000
+  targets: []
 --- !u!54 &2295054859020036964
 Rigidbody:
   m_ObjectHideFlags: 0

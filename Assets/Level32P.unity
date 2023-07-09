@@ -2161,7 +2161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49a67f34fbfa854bbdbf3f78ad4e38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
 --- !u!54 &68518054
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -81946,7 +81946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c49a67f34fbfa854bbdbf3f78ad4e38f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
+  damage: 10
 --- !u!1 &4494945602837233418
 GameObject:
   m_ObjectHideFlags: 0
@@ -83080,12 +83080,20 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1327915612394279225, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1327915612398770489, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_Name
       value: ThirdPersonController
       objectReference: {fileID: 0}
     - target: {fileID: 1327915612398770489, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1327915612399021241, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1327915612399021245, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
@@ -83146,7 +83154,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 052e90d7432df4c4e88eb4e34b601497, type: 3}
     - target: {fileID: 1327915612399021246, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: scoreCheck
-      value: 400
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1327915612399021246, guid: c8b9a0ce8e2a7b64786e54100ecfaddf, type: 3}
       propertyPath: buildingToDestroy
@@ -83655,7 +83663,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 4203376514604540925}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   m_Radius: 0.3
   m_Height: 1.6
   m_Direction: 1

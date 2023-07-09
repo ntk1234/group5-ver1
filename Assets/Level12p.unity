@@ -11859,7 +11859,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1840491383
 Transform:
   m_ObjectHideFlags: 0
@@ -11886,7 +11886,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840491382}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c94d66d0cc828294da021a1982fbb7d8, type: 3}
   m_Name: 
@@ -11897,7 +11897,7 @@ MonoBehaviour:
   totalThrows: 30
   throwCooldown: 0
   throwKey: 104
-  throwForce: 70
+  throwForce: 10
   throwUpwardForce: 0
 --- !u!1 &1852942913
 GameObject:

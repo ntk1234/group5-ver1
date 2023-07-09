@@ -220,6 +220,8 @@ MonoBehaviour:
   moveSpeed: 3
   damageEffectPrefab: {fileID: 0}
   scoreValue: 10
+  detectionRadius: 1000
+  targets: []
 --- !u!136 &6333230675787159190
 CapsuleCollider:
   m_ObjectHideFlags: 0
